@@ -29,6 +29,8 @@ public class MiniCashVelocityManager {
         // プロキシ起動時の処理
         logger.info("Velocityプラグインが有効になりました！");
     }
+
+    //プレイヤーが接続した場合の処理
     @Subscribe
     public void onPlayerJoin(PostLoginEvent event) {
         String username = event.getPlayer().getUsername();
