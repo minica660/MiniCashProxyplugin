@@ -53,28 +53,6 @@ public class Model {
     }
 
 
-    // バックエンドサーバーへのタイトルメッセージ
-    public void sendAllServerTitleMessage(String message, Sound sound) {
-
-        Component sendMessage = Component.text(message);
-
-        Sound sound1 = sound;
-
-        proxy.getAllPlayers().forEach(player -> {
-
-            if (sound1 != null) {
-                player.playSound(sound1);
-            }
-
-            player.sendMessage(sendMessage);
-
-        });
-
-
-
-    }
-
-
 
 
     // サーバー転送用メソッド
